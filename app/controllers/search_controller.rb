@@ -14,13 +14,13 @@ class SearchController < ApplicationController
       #
       # @poems = fetch_poem_data(poem_parsed)
 
-      poem = @poems.first.lines
-
-      ibm_conn = Faraday.new(url: "https://api.us-south.tone-analyzer.watson.cloud.ibm.com") do |faraday|
-        faraday.basic_auth('apikey', ENV['API_KEY'])
-      end
-      ibm_response = ibm_conn.get("/instances/d077d333-99fc-462d-94a7-b25ee901dc19/v3/tone?version=2017-09-21&text=#{poem}")
-      ibm_parsed = JSON.parse(ibm_response.body, symbolize_names: true)
-    binding.pry
+    #   poem = @poems.first.lines
+    #
+    #   ibm_conn = Faraday.new(url: "https://api.us-south.tone-analyzer.watson.cloud.ibm.com") do |faraday|
+    #     faraday.basic_auth('apikey', ENV['API_KEY'])
+    #   end
+    #   ibm_response = ibm_conn.get("/instances/d077d333-99fc-462d-94a7-b25ee901dc19/v3/tone?version=2017-09-21&text=#{poem}")
+    #   ibm_parsed = JSON.parse(ibm_response.body, symbolize_names: true)
+    # binding.pry
   end
 end
