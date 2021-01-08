@@ -1,0 +1,8 @@
+<h1>Poems by <%= params[:author] %> </h1>
+
+<% @poems.each do |poem| %>
+  <div class="poem">
+      <p> Title: <%= poem.title %> </p>
+      <p> Poem: <%= poem.lines %> </p>
+  </div>
+<% end %>

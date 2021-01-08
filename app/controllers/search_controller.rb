@@ -11,8 +11,7 @@ class SearchController < ApplicationController
         Poem.new(data)
       end
     end
-
     @poems = fetch_poem_data(poem_parsed)
-
+    binding.pry
   end
 end

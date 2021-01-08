@@ -14,11 +14,8 @@ describe "User can visit root path" do
     click_on 'Get Poems'
 
     within(first('.poem')) do
-    expect(page).to have_content("Happy")
-    expect(page).to have_css('.title')
-    expect(page).to have_css('.author')
-    expect(page).to have_css('.poem')
-    expect(page).to have_css('.tone')
+    expect(page).to have_content("Not at Home to Callers")
+    expect(page).to have_content("Says the Naked Tree --")
   end
   end
 
